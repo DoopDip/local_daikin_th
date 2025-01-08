@@ -179,8 +179,8 @@ class LocalDaikin(ClimateEntity):
         self._runtime_today = None
         self._energy_today = None
         self._mac = None
-        self._max_temp = 30 # may need some logic to set this based on the device ID
-        self._min_temp = 10
+        self._max_temp = 32 # may need some logic to set this based on the device ID
+        self._min_temp = 16
             
 
         self._attr_hvac_modes = [HVACMode.OFF, HVACMode.COOL, HVACMode.DRY, HVACMode.FAN_ONLY]
@@ -199,7 +199,7 @@ class LocalDaikin(ClimateEntity):
             SWING_VERTICAL,
             SWING_HORIZONTAL
         ]
-        self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.TURN_OFF | ClimateEntityFeature.TURN_ON | ClimateEntityFeature.FAN_MODE | ClimateEntityFeature.SWING_MODE | ClimateEntityFeature.SWING_HORIZONTAL_MODE
+        self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.TURN_OFF | ClimateEntityFeature.TURN_ON | ClimateEntityFeature.FAN_MODE
         self._enable_turn_on_off_backwards_compatibility = False
         
 
