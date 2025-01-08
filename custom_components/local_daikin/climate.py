@@ -199,7 +199,7 @@ class LocalDaikin(ClimateEntity):
             SWING_VERTICAL,
             SWING_HORIZONTAL
         ]
-        self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.TURN_OFF | ClimateEntityFeature.TURN_ON | ClimateEntityFeature.FAN_MODE | ClimateEntityFeature.SWING_MODE
+        self._attr_supported_features = ClimateEntityFeature.TARGET_TEMPERATURE | ClimateEntityFeature.TURN_OFF | ClimateEntityFeature.TURN_ON | ClimateEntityFeature.FAN_MODE
         self._enable_turn_on_off_backwards_compatibility = False
         
 
